@@ -1,0 +1,66 @@
+//============================================================================================================================
+// This is of interest because all known methods for counting primes take a lot of memory, or they return only appromixate values.
+// This file is the reasoning behind an exact prime counting function that is polynomial time. 
+//
+// Maybe it can help solve the Rieman hypothesis or at least make the question irrelavent? 
+//
+// My plan is to use this work to expand and find a way to predict the primes. I've already detected a pattern and will follow 
+// up soon.
+//=======================================================================================================================
+
+Equation for Prime Numbers
+
+Let's say you want to know the amount of prime numbers between 1 and a certain number N.
+
+We know that there are N numbers between 1 and N (assuming 1 and N are included as well).
+
+For example...there are 30 numbers between 1 and 30. 40 numbers between 1 and 40. And so on.
+
+So we know numbers are either prime or composite. Therefore:
+
+N = #composites + #primes
+
+There are two types of composites (non-prime numbers):
+
+1.Semi primes (a number made up of two primes multiplied together)
+
+2. Composite (a number made up of two numbers multiplied together)
+
+To get all the composites make a listing of the following. Let's say N is 200.
+
+All multiples of 2 to N: 2, 4, 6, 8, 10,
+                                      12, 14, 16, 18, 20
+                                      22, 24, 26, 28, 30,
+                                      ...
+
+All multiples of 3 to N: 3, 6, 9, 12
+                                      15, 18, 21,
+                                      24, 27, 30, ...
+
+
+All multiples of 5 to N: 5, 10, 15, 20
+                                      25, 30, ...  ,
+
+All multiples of 7 to N: 7, 14, 21, 28, 35,
+                                       42, 49, 56, 63, 70
+                                       77, 84, 91, 98, 105,
+                                       112, 119, 126, 133,
+                                       140, 147, 154, 161,
+                                       168, ...
+
+
+Turns out if you take away all the multiples of 2, 3, and 5 away from the list of multiples of 7 what you are left with are semi primes.
+
+The position number of those semi primes are some of the prime numbers beside 2, 3, 5, and 7. Use this information to find the other semi prime numbers up to N.
+
+To find the prime numbers in total:
+
+#prime numbers up to N = N - (#composites + #semi-prime composites)
+
+So now we know the # of semi primes, # non-semi prime composites, and the total amount of numbers. This is enough to find the total amount of primes in total.
+
+Any person with a mathematics background can use the above information to create an equation to calculate the amount of primes with just at max thirty or so mathematical operations.
+
+I'm in in the process of finalizing it on paper. Then I'll publish it online for everyone.
+
+This ultimately can help create an algorithm to allow factorization of large prime numbers. Anyone with the right background knows what this means.
