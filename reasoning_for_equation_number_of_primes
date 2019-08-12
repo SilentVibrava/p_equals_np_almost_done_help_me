@@ -1,5 +1,5 @@
 //============================================================================================================================
-// This is of interest because all known methods for counting primes take a lot of memory, or they return only appromixate values.
+// This is of interest because all known methods for counting primes take a lot of memory, or they return only approximate values.
 // This file is the reasoning behind an exact prime counting function that is polynomial time. 
 //
 // Maybe it can help solve the Rieman hypothesis or at least make the question irrelavent? 
